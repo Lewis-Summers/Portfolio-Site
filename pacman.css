@@ -1,0 +1,18 @@
+@font-face {
+    font-family: PacManFont;
+    src: url("assests/Emulogic-zrEw.ttf");
+}
+
+.cursor-flipped {
+    transform: scaleX(-1);
+}
+
+.cursor-dot{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-image: url("assests/pacman2.gif");
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 100;  
+}

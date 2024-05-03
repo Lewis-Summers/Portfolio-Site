@@ -1,0 +1,93 @@
+body{
+    margin: 5px;
+    padding: 5px;
+    background-color: black;
+    font-family: pacManFont;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.pacman{
+    height: 95vh;
+    z-index: 101;
+    translate: -100%;
+    position: fixed;
+    border: none;
+    border-radius: 50%;
+
+}
+
+.hero-container{
+    height: 90vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid 4px blue;
+    border-radius: 10px;
+}
+
+.container-wrapper{
+    border: solid 4px blue;
+    padding: 10px;
+    border-radius: 10px;
+    width: 98%;
+    /* width:97%; */
+    /* position: fixed; */ 
+}
+
+
+.about-container{
+    height: 90vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid 4px blue;
+    border-radius: 10px;
+}
+
+.ghost-container{
+    display: flex;
+    flex-direction: row;
+    translate: -100%;
+    background-color: black;
+}
+.ghost-scene-wrapper{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 20vh;
+}
+
+.ghost{
+    height: 20vh;
+    z-index: 101;
+    padding-left: 50px;
+}
+.ghost-scene{
+    display: flex;
+    align-items: center;
+}
+
+
+.dots-container{
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    position: absolute;
+    
+}
+.dot{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 75px;
+}
