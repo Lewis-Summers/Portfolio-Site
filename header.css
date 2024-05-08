@@ -1,0 +1,51 @@
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 10vh;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 99;
+}
+
+.header-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 10px;
+}
+
+.header-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 25px;
+}
+
+.header-link{
+    text-decoration: none;
+    color: blue;
+    padding: 10px;
+}
+
+.header-link:hover{
+    color: white;
+}
+
+body{
+    margin: 5px;
+    padding: 5px;
+    background-color: black;
+    font-family: pacManFont;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function updateMousePosition(e) {
     // Update mouseX and mouseY with the current mouse position
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+    mouseX = e.clientX - cursor.offsetWidth / 2;
+    mouseY = e.clientY - cursor.offsetHeight / 2;
 }
 
 function updateCursor() {
