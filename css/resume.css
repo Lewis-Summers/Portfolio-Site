@@ -1,0 +1,32 @@
+
+.main-container{
+    min-height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid 4px blue;
+    border-radius: 10px;
+}
+
+.container-wrapper{
+    border: solid 4px blue;
+    padding: 10px;
+    border-radius: 10px;
+    width: 98%;
+    margin-top: 10vh;
+    /* width:97%; */
+    /* position: fixed; */ 
+}
+
+.resume-image{
+    width: 60%;
+    height: 100%;
+    margin-bottom: 15px;
+}
+
+.download-text{
+    color: white;
+    text-decoration: none;
+}

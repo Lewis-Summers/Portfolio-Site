@@ -1,3 +1,22 @@
+@font-face {
+    font-family: PacManFont;
+    src: url("/assests/Emulogic-zrEw.ttf");
+}
+
+body{
+    margin: 5px;
+    padding: 5px;
+    background-color: black;
+    font-family: pacManFont;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
 .header {
     position: fixed;
     display: flex;
@@ -5,6 +24,7 @@
     align-items: center;
     flex-direction: row;
     height: 10vh;
+    left: -5px;
     top: 0;
     width: 100%;
     background-color: black;
@@ -29,23 +49,11 @@
 
 .header-link{
     text-decoration: none;
-    color: blue;
+    color: white;
     padding: 10px;
 }
 
 .header-link:hover{
-    color: white;
+    color: blue;
 }
 
-body{
-    margin: 5px;
-    padding: 5px;
-    background-color: black;
-    font-family: pacManFont;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
