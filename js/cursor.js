@@ -34,14 +34,15 @@ function updateCursor() {
 
     dots.forEach(dot => {
         const rect = dot.getBoundingClientRect();
-        // drawBoundingRect(dot)
-        const size = 30;
-        const left = rect.left-size;
-        const right = rect.right;
-        const top = rect.top-size;
-        const bottom = rect.bottom;
         
-        if ((left < cursorX && cursorX < right) && (top < cursorY && cursorY < bottom)) {
+        const size = 20;
+        const dotSize = 10;
+        const left = rect.left-dotSize;
+        const right = rect.right+dotSize;
+        const top = rect.top-dotSize;
+        const bottom = rect.bottom+dotSize;
+        
+        if ((left < cursorX+size && cursorX < right) && (top < cursorY+size && cursorY < bottom)) {
             dot.style.backgroundColor = 'black';
         }
 
@@ -61,20 +62,6 @@ function updateCursor() {
 
     requestAnimationFrame(updateCursor);
 }
-
-
-function drawBoundingRect(x, y) {
-    // console.log(x, y);
-    const rect = document.createElement('div');
-    rect.style.position = 'absolute';
-    rect.style.top = y 
-    rect.style.left = x
-    rect.style.width = '50px';
-    rect.style.height = '50px';
-    rect.style.border = '2px solid red';
-    rect.style.zIndex = '9999';
-    document.body.appendChild(rect);
-  }
 
 updateCursor();
 

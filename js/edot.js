@@ -29,56 +29,29 @@ for (let i = 0; i < edotWCount; i++) {
     addDot(edotHorizontal[1]);
 }
 
-
-
-const dots = document.querySelectorAll('.edot');
-const trigger = document.querySelector('.cursor-dot');
-
-// Function to check collision between two elements
-function isColliding(elem1, rect2) {
-    const rect1 = elem1.getBoundingClientRect();
-    return (
-        rect1.right < rect2[0]+30 ||
-        rect1.left > rect2[0] ||
-        rect1.bottom < rect2[1]+30 ||
-        rect1.top > rect2[1]
-    );
-}
-
-// Function to hide dots when colliding with the trigger element
-function checkCollision(x, y) {
-    drawBoundingRect(trigger);
-    // console.log(cursorX, cursorY)
-    // console.log(mouseX, mouseY)
-    console.log(cursor.style.top, cursor.style.left)
-    dots.forEach(dot => {
-        if (isColliding(dot, (trigger))) {
-            dot.style.backgroundColor = 'red';
+let allBlack = false;
+document.addEventListener("mousemove", ()=>{
+    const edots = document.querySelectorAll('.edot');
+    allBlack = true;
+    
+    edots.forEach(edot => {
+        const backgroundColor = window.getComputedStyle(edot).backgroundColor;
+        if (backgroundColor !== 'rgb(0, 0, 0)' && backgroundColor !== '#000' && backgroundColor !== 'black') {
+            allBlack = false;
         }
     });
+});
+
+const heroText = document.querySelector('#hero-text');
+while (allBlack) {
+    let textFlag = false;
+    setInterval(() => {
+        if (textFlag) {
+            targetElement.textContent = "Original Text";
+        } else {
+            targetElement.textContent = "Changed Text";
+        }
+    }, 1000);
 }
 
-function drawBoundingRect(element) {
-    const boundingRect = element.getBoundingClientRect();
-    const rect = document.createElement('div');
-    rect.style.position = 'absolute';
-    rect.style.top = boundingRect.top + 'px';
-    rect.style.left = boundingRect.left + 'px';
-    rect.style.width = boundingRect.width + 'px';
-    rect.style.height = boundingRect.height + 'px';
-    rect.style.border = '2px solid red';
-    rect.style.zIndex = '9999';
-    document.body.appendChild(rect);
-  }
-  
 
-// Check collision initially and on window resize
-checkCollision();
-window.addEventListener('resize', checkCollision);
-
-// Move trigger element
-// window.addEventListener('mousemove', function (event) {
-//     trigger.style.left = (event.clientX - trigger.offsetWidth / 2) + 'px';
-//     trigger.style.top = (event.clientY - trigger.offsetHeight / 2) + 'px';
-//     checkCollision();
-// });
