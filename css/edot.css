@@ -21,7 +21,8 @@
 }
 
 .edot-vert > div{
-    margin-bottom: 25px;
+    margin-bottom: 12.5px;
+    margin-top: 12.5px;
 }
 
 .edots-wrapper{
@@ -31,6 +32,8 @@
     translate: 0 -100%;
     left:50px;
     position: absolute;
+    pointer-events: none;
+
 }
 
 .edot-sides{
