@@ -18,7 +18,7 @@ const height = container.offsetHeight;
 const edotSize = 30;
 
 const edotWCount = Math.floor((width - width * 0.05) / edotSize) - 2;
-const edotHCount = Math.floor((height) / edotSize) - 1;
+const edotHCount = Math.floor((height) / edotSize) - 2;
 
 console.log(edotWCount, edotHCount);
 
